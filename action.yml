@@ -1,0 +1,19 @@
+name: 'go-metadata'
+description: 'Extract metadata from Go modules'
+author: 'Conventional Actions'
+inputs:
+  mod_path:
+    description: 'go module path'
+    required: false
+    default: 'go.mod'
+outputs:
+  module:
+    description: 'go module name'
+  go_version:
+    description: 'go version'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: flag
+  color: purple
