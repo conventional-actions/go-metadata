@@ -30,13 +30,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set version
+      - name: Get metadata
+        id: metadata
         uses: ./
-        with:
-          version: 1.2.3
       - name: Run test
         run: |
-          go run ./test/main.go
+          echo ${{ steps.metadata.outputs.go_version }}
+          echo ${{ steps.metadata.outputs.module }}
 
 env:
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
