@@ -84,8 +84,8 @@ async function run() {
             config.mod_path
         ]);
         const mod = JSON.parse(output.stdout);
-        core.setOutput('module', mod.Go);
-        core.setOutput('go_version', mod.Module.Path);
+        core.setOutput('module', mod.Module.Path);
+        core.setOutput('go_version', mod.Go);
         return;
     }
     catch (error) {

@@ -15,8 +15,8 @@ async function run(): Promise<void> {
     ])
     const mod: GoMod = JSON.parse(output.stdout)
 
-    core.setOutput('module', mod.Go)
-    core.setOutput('go_version', mod.Module.Path)
+    core.setOutput('module', mod.Module.Path)
+    core.setOutput('go_version', mod.Go)
 
     return
   } catch (error) {
