@@ -12,8 +12,8 @@ outputs:
   go_version:
     description: 'go version'
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'node24'
+  main: 'dist/index.cjs'
 branding:
   icon: flag
   color: purple
